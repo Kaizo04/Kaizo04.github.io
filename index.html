@@ -1,1 +1,327 @@
-<head> Test</head>
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soline Beauté | Portfolio</title>
+    <style>
+        /* Réinitialisation et Polices */
+        @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Montserrat:wght@300;400;500&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #fdfbf7;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 500;
+            letter-spacing: 1px;
+        }
+
+        /* Barre de navigation */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 30px 10%;
+            background-color: #fdfbf7;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            border-bottom: 1px solid #eae1d4;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #bc9c82;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #555;
+            margin-left: 30px;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #bc9c82;
+        }
+
+        /* Section Accueil / Présentation */
+        .hero {
+            text-align: center;
+            padding: 80px 20px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            color: #2c2c2c;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 16px;
+            color: #777;
+            font-style: italic;
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 20px;
+        }
+
+        .line {
+            width: 50px;
+            height: 1px;
+            background-color: #bc9c82;
+            margin: 20px auto;
+        }
+
+        /* Galerie Portfolio */
+        .portfolio-container {
+            padding: 0 10% 80px 10%;
+        }
+
+        .categories {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 40px;
+            gap: 20px;
+        }
+
+        .category-btn {
+            background: none;
+            border: none;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #888;
+            cursor: pointer;
+            padding-bottom: 5px;
+            border-bottom: 1px solid transparent;
+            transition: all 0.3s;
+        }
+
+        .category-btn.active, .category-btn:hover {
+            color: #bc9c82;
+            border-bottom: 1px solid #bc9c82;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 25px;
+        }
+
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 4px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.02);
+            background-color: #fff;
+            aspect-ratio: 4 / 5;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s ease;
+        }
+
+        /* Effet au survol des photos */
+        .gallery-item:hover img {
+            transform: scale(1.05);
+        }
+
+        .overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(transparent, rgba(0, 0, 0, 0.6));
+            padding: 30px 20px;
+            opacity: 0;
+            transition: opacity 0.4s ease;
+        }
+
+        .gallery-item:hover .overlay {
+            opacity: 1;
+        }
+
+        .overlay h3 {
+            color: #fff;
+            font-size: 22px;
+            margin-bottom: 5px;
+        }
+
+        .overlay p {
+            color: #e5e5e5;
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* Pied de page (Contact) */
+        footer {
+            background-color: #f4eee4;
+            text-align: center;
+            padding: 60px 20px;
+            border-top: 1px solid #eae1d4;
+        }
+
+        footer h2 {
+            font-size: 32px;
+            margin-bottom: 15px;
+            color: #2c2c2c;
+        }
+
+        .insta-link {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 12px 30px;
+            background-color: #bc9c82;
+            color: white;
+            text-decoration: none;
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border-radius: 2px;
+            transition: background-color 0.3s;
+        }
+
+        .insta-link:hover {
+            background-color: #a4836b;
+        }
+
+        .credits {
+            margin-top: 40px;
+            font-size: 11px;
+            color: #999;
+            letter-spacing: 1px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                gap: 15px;
+                padding: 20px;
+            }
+            nav a {
+                margin: 0 10px;
+            }
+            .hero h1 {
+                font-size: 36px;
+            }
+            .portfolio-container {
+                padding: 0 5% 60px 5%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">Soline Beauté</div>
+        <nav>
+            <a href="#portfolio">Portfolio</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>Sublimer votre beauté naturelle</h1>
+        <div class="line"></div>
+        <p>Créations uniques en onglerie, regard et maquillage permanent.</p>
+    </section>
+
+    <main class="portfolio-container" id="portfolio">
+        
+        <div class="categories">
+            <button class="category-btn active">Tout voir</button>
+            <button class="category-btn">Onglerie</button>
+            <button class="category-btn">Regard</button>
+            <button class="category-btn">Soins</button>
+        </div>
+
+        <div class="gallery">
+            
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1604654894610-df63bc536371?q=80&w=600" alt="Pose d'ongles">
+                <div class="overlay">
+                    <h3>Semi-Permanent Nude</h3>
+                    <p>Onglerie</p>
+                </div>
+            </div>
+
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?q=80&w=600" alt="Extension de cils">
+                <div class="overlay">
+                    <h3>Volume Russe</h3>
+                    <p>Regard</p>
+                </div>
+            </div>
+
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1632345031435-8797b2d58045?q=80&w=600" alt="Soin du visage">
+                <div class="overlay">
+                    <h3>Soin Éclat Hydra</h3>
+                    <p>Soins</p>
+                </div>
+            </div>
+
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1607779097040-26e80aa78e66?q=80&w=600" alt="Nail Art">
+                <div class="overlay">
+                    <h3>Nail Art Minimaliste</h3>
+                    <p>Onglerie</p>
+                </div>
+            </div>
+
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1512496015851-a90fb38ba796?q=80&w=600" alt="Maquillage">
+                <div class="overlay">
+                    <h3>Rehaussement de cils</h3>
+                    <p>Regard</p>
+                </div>
+            </div>
+
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1596178060671-7a80dc8059ea?q=80&w=600" alt="Manucure">
+                <div class="overlay">
+                    <h3>Pose Américaine</h3>
+                    <p>Onglerie</p>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <footer id="contact">
+        <h2>Prendre rendez-vous</h2>
+        <p>Basée à Paris et alentours — Uniquement sur rendez-vous</p>
+        <p>Suivez mes créations quotidiennes sur les réseaux</p>
+        <a href="#" class="insta-link">@soline_beaute</a>
+        <div class="credits">
+            &copy; 2026 Soline Beauté. Tous droits réservés.
+        </div>
+    </footer>
+
+</body>
+</html>
