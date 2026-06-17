@@ -1,75 +1,184 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset ="UTF-8">
-    <meta name = "viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio Nail Art - Margot GOUGEROT</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <link rel="stylesheet" href="style.css"> 
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio Nail Art - Margot GOUGEROT</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <section class="page" id="accueil">
-        <div class="decoration gauche"></div>
-        <div class="decoration droite"></div>
-        <div class="hero-content">
-            <img src="images/profil.jpg" alt="Photo de profil" class="photo-profil">
-            <div class="hero-texte"> 
-                <p class="eyebrow">Nail Artist</p>
-                <h1>Margot <span class="accent">GOUGEROT</span></h1>
-                <p class="tagline">En recherche d'alternance en esthétisme</p>
-            </div>
-        </div>
-        <button class="fleche-bas" aria-label="Voir les créations">
-            <i class="fa-solid fa-chevron-down"></i>
-        </button>
-    </section>
 
-    <section class="page" id="galerie">
-        <h2 class="titre-section">Mes <span class="accent">Créations</span></h2>
-        <div class="grille-photos">
-            <img src="images/ongles_01.jpg" alt="Création nail art 1" class="photo-ongle">
-            <img src="images/ongles_02.jpg" alt="Création nail art 2" class="photo-ongle">
-            <img src="images/ongles_03.jpg" alt="Création nail art 3" class="photo-ongle">
-            <img src="images/ongles_04.jpg" alt="Création nail art 4" class="photo-ongle">
-            <img src="images/ongles_05.jpg" alt="Création nail art 5" class="photo-ongle">
-            <img src="images/ongles_06.jpg" alt="Création nail art 6" class="photo-ongle">
-            <img src="images/ongles_07.jpg" alt="Création nail art 7" class="photo-ongle">
-            <img src="images/ongles_08.jpg" alt="Création nail art 8" class="photo-ongle">
-            <img src="images/ongles_09.jpg" alt="Création nail art 9" class="photo-ongle">
-        </div>
-        <button class="fleche-bas" aria-label="A propos">
-            <i class="fa-solid fa-chevron-down"></i>
-        </button>
-    </section>
-
-    <section class="page" id="apropos">
-        <div class="decoration gauche"></div>
-        <h2 class="titre-section">A <span class="accent">Propos</span></h2>
-        <div class="apropos-contenu">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent dapibus eget leo ut convallis. Duis id sapien mattis, semper libero et, ullamcorper elit. Pellentesque gravida dictum mauris ullamcorper ornare. Proin ut ipsum urna. Donec ligula orci, ultrices non tellus sed, porta porta nisl. In hac habitasse platea dictumst. Sed vel tellus neque. Nulla dignissim tincidunt ligula eget facilisis. Nullam ante lacus, cursus ut ante a, mattis aliquam turpis. Maecenas nec mauris venenatis, bibendum nibh vel, sollicitudin urna. Nullam quis finibus enim. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Morbi a laoreet sapien.</p>
-        </div>
-        <button class="fleche-bas" aria-label="Contact">
-            <i class="fa-solid fa-chevron-down"></i>
-        </button>
-    </section>
-
-    <section class="page" id="contact">
-        <div class="decoration droite"></div>
-        <h2 class="titre-section">Me <span class="accent">Contacter</span></h2>
-        <div class="contact-liens">
-            <a href="mailto:margot.goug@email.com" class="lien-contact">
-                <i class="fa-solid fa-envelope"></i>
-                <span>margot.goug@gmail.com</span>
-            </a>
-        </div>
-    </section>
-
-    <div id="lightbox" class="lightbox">
-        <span id="lightbox-fermer">&times;</span>
-        <img id="lightbox-img" src="" alt="Photo agrandie">
+  <!-- ===== SECTION 1 : ACCUEIL ===== -->
+  <section class="page" id="accueil">
+    <div class="decoration gauche">
+      <svg class="fleur-lys" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+        <g stroke="#C9748F" stroke-width="1.2" fill="none" stroke-linecap="round">
+          <!-- Pétale central haut -->
+          <path d="M50,15 C44,25 44,38 50,45 C56,38 56,25 50,15Z"/>
+          <!-- Pétale gauche -->
+          <path d="M50,45 C40,40 28,42 22,48 C30,52 42,50 50,45Z"/>
+          <!-- Pétale droit -->
+          <path d="M50,45 C60,40 72,42 78,48 C70,52 58,50 50,45Z"/>
+          <!-- Tige -->
+          <line x1="50" y1="45" x2="50" y2="80"/>
+          <!-- Base feuilles gauche -->
+          <path d="M50,65 C44,60 36,62 34,67 C40,69 47,67 50,65Z"/>
+          <!-- Base feuilles droite -->
+          <path d="M50,65 C56,60 64,62 66,67 C60,69 53,67 50,65Z"/>
+          <!-- Barre horizontale -->
+          <line x1="38" y1="75" x2="62" y2="75"/>
+          <!-- Petite boule bas -->
+          <circle cx="50" cy="80" r="2.5"/>
+        </g>
+      </svg>
     </div>
+    <div class="decoration droite">
+      <svg class="fleur-lys" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+        <g stroke="#C9748F" stroke-width="1.2" fill="none" stroke-linecap="round">
+          <path d="M50,15 C44,25 44,38 50,45 C56,38 56,25 50,15Z"/>
+          <path d="M50,45 C40,40 28,42 22,48 C30,52 42,50 50,45Z"/>
+          <path d="M50,45 C60,40 72,42 78,48 C70,52 58,50 50,45Z"/>
+          <line x1="50" y1="45" x2="50" y2="80"/>
+          <path d="M50,65 C44,60 36,62 34,67 C40,69 47,67 50,65Z"/>
+          <path d="M50,65 C56,60 64,62 66,67 C60,69 53,67 50,65Z"/>
+          <line x1="38" y1="75" x2="62" y2="75"/>
+          <circle cx="50" cy="80" r="2.5"/>
+        </g>
+      </svg>
+    </div>
+    <div class="hero-content">
+      <img src="images/profil.jpg" alt="Photo de profil" class="photo-profil">
+      <div class="hero-texte">
+        <p class="eyebrow">Nail Artist</p>
+        <h1>Margot <span class="accent">GOUGEROT</span></h1>
+        <p class="tagline">En recherche d'alternance en esthétisme</p>
+      </div>
+    </div>
+    <button class="fleche-bas" aria-label="Voir les créations">
+      <i class="fa-solid fa-chevron-down"></i>
+    </button>
+  </section>
 
-    <script src="script.js"></script>
-</body></html>
+  <!-- ===== SECTION 2 : GALERIE ===== -->
+  <section class="page" id="galerie">
+    <h2 class="titre-section">Mes <span class="accent">Créations</span></h2>
+    <div class="carrousel-wrapper">
+      <button class="carrousel-btn gauche" id="btn-prev" aria-label="Précédent">
+        <i class="fa-solid fa-chevron-left"></i>
+      </button>
+      <div class="carrousel-piste-outer">
+        <div class="carrousel-piste" id="carrousel-piste">
+          <img src="images/ongles_01.jpg" alt="Création 1" class="photo-ongle">
+          <img src="images/ongles_02.jpg" alt="Création 2" class="photo-ongle">
+          <img src="images/ongles_03.jpg" alt="Création 3" class="photo-ongle">
+          <img src="images/ongles_04.jpg" alt="Création 4" class="photo-ongle">
+          <img src="images/ongles_05.jpg" alt="Création 5" class="photo-ongle">
+          <img src="images/ongles_06.jpg" alt="Création 6" class="photo-ongle">
+          <img src="images/ongles_07.jpg" alt="Création 7" class="photo-ongle">
+          <img src="images/ongles_08.jpg" alt="Création 8" class="photo-ongle">
+          <img src="images/ongles_09.jpg" alt="Création 9" class="photo-ongle">
+          <img src="images/ongles_10.jpg" alt="Création 10" class="photo-ongle">
+          <img src="images/ongles_11.jpg" alt="Création 11" class="photo-ongle">
+          <img src="images/ongles_12.jpg" alt="Création 12" class="photo-ongle">
+        </div>
+      </div>
+      <button class="carrousel-btn droite" id="btn-next" aria-label="Suivant">
+        <i class="fa-solid fa-chevron-right"></i>
+      </button>
+    </div>
+    <div class="carrousel-points" id="carrousel-points"></div>
+    <button class="fleche-bas" aria-label="À propos">
+      <i class="fa-solid fa-chevron-down"></i>
+    </button>
+  </section>
+
+  <!-- ===== SECTION 3 : À PROPOS ===== -->
+  <section class="page" id="apropos">
+    <div class="decoration gauche">
+      <svg class="fleur-lys" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+        <g stroke="#C9748F" stroke-width="1.2" fill="none" stroke-linecap="round">
+          <path d="M50,15 C44,25 44,38 50,45 C56,38 56,25 50,15Z"/>
+          <path d="M50,45 C40,40 28,42 22,48 C30,52 42,50 50,45Z"/>
+          <path d="M50,45 C60,40 72,42 78,48 C70,52 58,50 50,45Z"/>
+          <line x1="50" y1="45" x2="50" y2="80"/>
+          <path d="M50,65 C44,60 36,62 34,67 C40,69 47,67 50,65Z"/>
+          <path d="M50,65 C56,60 64,62 66,67 C60,69 53,67 50,65Z"/>
+          <line x1="38" y1="75" x2="62" y2="75"/>
+          <circle cx="50" cy="80" r="2.5"/>
+        </g>
+      </svg>
+    </div>
+    <div class="decoration droite">
+      <svg class="fleur-lys" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+        <g stroke="#C9748F" stroke-width="1.2" fill="none" stroke-linecap="round">
+          <path d="M50,15 C44,25 44,38 50,45 C56,38 56,25 50,15Z"/>
+          <path d="M50,45 C40,40 28,42 22,48 C30,52 42,50 50,45Z"/>
+          <path d="M50,45 C60,40 72,42 78,48 C70,52 58,50 50,45Z"/>
+          <line x1="50" y1="45" x2="50" y2="80"/>
+          <path d="M50,65 C44,60 36,62 34,67 C40,69 47,67 50,65Z"/>
+          <path d="M50,65 C56,60 64,62 66,67 C60,69 53,67 50,65Z"/>
+          <line x1="38" y1="75" x2="62" y2="75"/>
+          <circle cx="50" cy="80" r="2.5"/>
+        </g>
+      </svg>
+    </div>
+    <h2 class="titre-section">À <span class="accent">Propos</span></h2>
+    <div class="apropos-contenu">
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    </div>
+    <button class="fleche-bas" aria-label="Contact">
+      <i class="fa-solid fa-chevron-down"></i>
+    </button>
+  </section>
+
+  <!-- ===== SECTION 4 : CONTACT ===== -->
+  <section class="page" id="contact">
+    <div class="decoration gauche">
+      <svg class="fleur-lys" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+        <g stroke="#C9748F" stroke-width="1.2" fill="none" stroke-linecap="round">
+          <path d="M50,15 C44,25 44,38 50,45 C56,38 56,25 50,15Z"/>
+          <path d="M50,45 C40,40 28,42 22,48 C30,52 42,50 50,45Z"/>
+          <path d="M50,45 C60,40 72,42 78,48 C70,52 58,50 50,45Z"/>
+          <line x1="50" y1="45" x2="50" y2="80"/>
+          <path d="M50,65 C44,60 36,62 34,67 C40,69 47,67 50,65Z"/>
+          <path d="M50,65 C56,60 64,62 66,67 C60,69 53,67 50,65Z"/>
+          <line x1="38" y1="75" x2="62" y2="75"/>
+          <circle cx="50" cy="80" r="2.5"/>
+        </g>
+      </svg>
+    </div>
+    <div class="decoration droite">
+      <svg class="fleur-lys" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+        <g stroke="#C9748F" stroke-width="1.2" fill="none" stroke-linecap="round">
+          <path d="M50,15 C44,25 44,38 50,45 C56,38 56,25 50,15Z"/>
+          <path d="M50,45 C40,40 28,42 22,48 C30,52 42,50 50,45Z"/>
+          <path d="M50,45 C60,40 72,42 78,48 C70,52 58,50 50,45Z"/>
+          <line x1="50" y1="45" x2="50" y2="80"/>
+          <path d="M50,65 C44,60 36,62 34,67 C40,69 47,67 50,65Z"/>
+          <path d="M50,65 C56,60 64,62 66,67 C60,69 53,67 50,65Z"/>
+          <line x1="38" y1="75" x2="62" y2="75"/>
+          <circle cx="50" cy="80" r="2.5"/>
+        </g>
+      </svg>
+    </div>
+    <h2 class="titre-section">Me <span class="accent">Contacter</span></h2>
+    <div class="contact-liens">
+      <a href="mailto:margot.goug@gmail.com" class="lien-contact">
+        <i class="fa-solid fa-envelope"></i>
+        <span>margot.goug@gmail.com</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- ===== LIGHTBOX ===== -->
+  <div id="lightbox" class="lightbox">
+    <span id="lightbox-fermer">&times;</span>
+    <img id="lightbox-img" src="" alt="Photo agrandie">
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
